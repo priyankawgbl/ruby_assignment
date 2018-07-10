@@ -44,3 +44,37 @@ puts hash_1.merge!(hash_2)
 print hash_2[:x]
 hash_1.each {|key, value| puts "#{key} is #{value.upcase}" }
 
+
+#lambda_1={|first_name,last_name| "#{first_name}#{last_name}"}
+
+#lambda_1.call("priyanka","singhal")
+
+
+
+a_proc = lambda {|a,b| puts a+b}
+
+a_proc.call("priyanka","singhal")
+
+
+
+
+  def compose proc1, proc2
+  Proc.new do |x|
+    proc2.call(proc1.call(x))
+  end
+end
+
+square = Proc.new do |x|
+  x * x
+end
+
+double = Proc.new do |x|
+  x + x
+end
+
+cal = compose double, square
+
+puts cal.call(5)
+
+
+
