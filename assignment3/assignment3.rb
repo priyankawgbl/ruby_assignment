@@ -19,14 +19,11 @@ puts "4.edit"
 name1 = gets.chomp
 case name1
 when "1"
-Product.add
+p1 = Product.new()
+p1.add
 when "2"
 
 else
 puts "please enter any option"
 end
 
-puts "enter product name"
-name2 gets.chomp
-puts "enter product price"
-price gets.chomp
