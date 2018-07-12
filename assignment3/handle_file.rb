@@ -15,12 +15,13 @@ class FileOperation
 
     file1 = File.open("inventory.txt", "r")
     while (line = file1.gets)
-
+      @arr =  line.split(",")
 
 
     end
-
-    @id = file1.lineno
+    puts @d1= @arr[0].to_i + 1
+    #@id = file1.lineno
+    @d2=@d1.to_s
 
 
   end
@@ -69,7 +70,7 @@ class FileOperation
           puts a = arr[1]
           b = arr[2]
           c = arr[3]
-          d = arr[4]
+          @d = arr[4]
           line.gsub('hgh', 'product_name')
 
 

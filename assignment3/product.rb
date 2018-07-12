@@ -22,8 +22,8 @@ class Product
   @company_name = gets.chomp
   f1 = FileOperation.new()
   puts id = f1.read_data
-  id_inc = id + 1
-  f1.add_data(id_inc,@product_name,@product_price,@stock_item,@company_name)
+
+  f1.add_data(id,@product_name,@product_price,@stock_item,@company_name)
 
   end
 
